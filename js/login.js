@@ -9,9 +9,9 @@ document.getElementById("loginBtn").addEventListener('click', function(){
 
     // verification ---- simply for this practice only: danger;;;
     if (email === "admin@fokir.com" && password === "Bangladesh"){
-        console.log('Valid user')
+        window.location.href = 'bank-inside.html'
     }
     else{
-        console.log('Invalid User')
+        alert("Kire tui password vule gesos\nTui amr sontan na!!!")
     }
 })
