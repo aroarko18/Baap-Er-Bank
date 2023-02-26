@@ -8,7 +8,6 @@ document.getElementById('withDraw-btn').addEventListener('click', function(){
     const withdrawAmountField = document.getElementById('withdraw-total')
     const withdrawAmountFieldString = withdrawAmountField.innerText;
     const withdrawAmount = parseFloat(withdrawAmountFieldString)
-    withdrawAmountField.innerText = withdrawAmount + withdrawFieldAmount;
 
     // balance display
     const balance = document.getElementById('balance-total')
@@ -16,6 +15,7 @@ document.getElementById('withDraw-btn').addEventListener('click', function(){
     const balanceAmount = parseFloat(balanceString)
 
     if (balanceAmount >= withdrawFieldAmount){
+        withdrawAmountField.innerText = withdrawAmount + withdrawFieldAmount;
         balance.innerText = balanceAmount - withdrawFieldAmount;
     }
     else{
